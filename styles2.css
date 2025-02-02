@@ -1,0 +1,85 @@
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+  }
+  
+
+  body {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #FFF6DA;
+    font-family: Arial, sans-serif;
+    flex-direction: column;
+    position: relative;
+    text-align: center;
+  }
+  
+
+  #content-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    height: 100vh;
+    padding: 20px;
+    opacity: 1;
+    transition: opacity 0.5s ease;
+  }
+  
+
+  #gif-container {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+  }
+  
+  #gif {
+    max-width: 100%;
+    height: auto;
+  }
+  
+
+  #yay-text {
+    font-size: 24px;
+    font-weight: bold;
+    margin-top: 20px;
+    color: #2ecc71; 
+  }
+  
+ 
+  @keyframes fadeIn {
+    0% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 1;
+    }
+  }
+  
+  #yay-text {
+    animation: fadeIn 1s ease-out;
+  }
+  
+
+  .button {
+    padding: 10px 20px;
+    font-size: 16px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+    background-color: green;
+    color: white;
+    transition: all 0.3s ease;
+  }
+  
+  .button:hover {
+    background-color: darkgreen;
+  }
+  

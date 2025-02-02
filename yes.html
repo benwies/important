@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Yes Page</title>
+    <link rel="stylesheet" href="styles2.css" />
+  </head>
+  <body>
+    <audio id="background-audio" src="music/bea.mp3" autoplay loop></audio>
+
+    <div id="content-container">
+      <div id="gif-container">
+        <img
+          id="gif"
+          src="images/milk-and-mocha-milk-and-mocha-bear.gif"
+          alt="Milk and Mocha Bear GIF"
+        />
+        <p id="yay-text">YAAAAAAAAAAAAAAAAAAAAAAY</p>
+      </div>
+    </div>
+
+    <script>
+      window.onload = function () {
+        const audio = document.getElementById("background-audio");
+        audio.volume = 0.9;
+        audio.play();
+      };
+    </script>
+  </body>
+</html>
