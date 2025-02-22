@@ -20,27 +20,38 @@
         />
         <p id="yay-text">YAAAAAAAAAAAAAAAAAAAAAAY</p>
 
-        <!-- Neues Formular mit Formspree -->
-        <form
-          id="dateTimeForm"
-          action="https://formspree.io/f/mqaejyrb"
-          method="POST"
-        >
+        <!-- Das Formular wurde hierhin verschoben -->
+        <form id="dateTimeForm">
           <label for="datum">Datum:</label>
-          <input type="date" name="datum" id="datum" required />
+          <input type="date" id="datum" required />
           <br />
           <label for="uhrzeit">Uhrzeit:</label>
-          <input type="time" name="uhrzeit" id="uhrzeit" required />
+          <input type="time" id="uhrzeit" required />
           <br />
-          <label for="email">Deine E-Mail:</label>
-          <input type="email" name="email" id="email" required />
-          <br />
-          <button type="submit" class="button">Senden</button>
+          <button type="button" class="button" onclick="sendEmail()">
+            Senden
+          </button>
         </form>
       </div>
     </div>
 
     <script>
+      function sendEmail() {
+        const datum = document.getElementById("datum").value;
+        const uhrzeit = document.getElementById("uhrzeit").value;
+
+        if (!datum || !uhrzeit) {
+          alert("Bitte Datum und Uhrzeit eingeben.");
+          return;
+        }
+
+        const email = "schr.ott@posteo.de";
+        const subject = "Neue Datum & Uhrzeit Eingabe";
+        const body = `Datum: ${datum}%0DUhrzeit: ${uhrzeit}`;
+
+        window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
+      }
+
       window.onload = function () {
         const audio = document.getElementById("background-audio");
         audio.volume = 0.9;
