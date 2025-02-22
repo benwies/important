@@ -77,9 +77,9 @@
     background-color: green;
     color: white;
     transition: all 0.3s ease;
-  }
-  
-  .button:hover {
+    margin-top: 20px; /* Fügt Abstand zwischen Text und Button hinzu */
+}
+
+.button:hover {
     background-color: darkgreen;
-  }
-  
+}

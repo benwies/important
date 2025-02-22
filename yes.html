@@ -1,12 +1,14 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="de">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Yes Page</title>
+    <title>Datum & Uhrzeit senden</title>
     <link rel="stylesheet" href="styles2.css" />
   </head>
   <body>
+    <h2></h2>
+
     <audio id="background-audio" src="music/bea.mp3" autoplay loop></audio>
 
     <div id="content-container">
@@ -17,6 +19,24 @@
           alt="Milk and Mocha Bear GIF"
         />
         <p id="yay-text">YAAAAAAAAAAAAAAAAAAAAAAY</p>
+
+        <!-- Neues Formular mit Formspree -->
+        <form
+          id="dateTimeForm"
+          action="https://formspree.io/f/mqaejyrb"
+          method="POST"
+        >
+          <label for="datum">Datum:</label>
+          <input type="date" name="datum" id="datum" required />
+          <br />
+          <label for="uhrzeit">Uhrzeit:</label>
+          <input type="time" name="uhrzeit" id="uhrzeit" required />
+          <br />
+          <label for="email">Deine E-Mail:</label>
+          <input type="email" name="email" id="email" required />
+          <br />
+          <button type="submit" class="button">Senden</button>
+        </form>
       </div>
     </div>
 
