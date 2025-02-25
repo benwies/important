@@ -3,7 +3,7 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>yaay</title>
+    <title>Datum & Uhrzeit senden</title>
     <link rel="stylesheet" href="styles2.css" />
   </head>
   <body>
@@ -20,38 +20,27 @@
         />
         <p id="yay-text">YAAAAAAAAAAAAAAAAAAAAAAY</p>
 
-        <!-- Das Formular wurde hierhin verschoben -->
-        <form id="dateTimeForm">
+        <!-- Neues Formular mit Formspree -->
+        <form
+          id="dateTimeForm"
+          action="https://formspree.io/f/mqaejyrb"
+          method="POST"
+        >
           <label for="datum">Datum:</label>
-          <input type="date" id="datum" required />
+          <input type="date" name="datum" id="datum" required />
           <br />
           <label for="uhrzeit">Uhrzeit:</label>
-          <input type="time" id="uhrzeit" required />
+          <input type="time" name="uhrzeit" id="uhrzeit" required />
           <br />
-          <button type="button" class="button" onclick="sendEmail()">
-            Senden
-          </button>
+          <label for="email">Deine E-Mail:</label>
+          <input type="email" name="email" id="email" required />
+          <br />
+          <button type="submit" class="button">Senden</button>
         </form>
       </div>
     </div>
 
     <script>
-      function sendEmail() {
-        const datum = document.getElementById("datum").value;
-        const uhrzeit = document.getElementById("uhrzeit").value;
-
-        if (!datum || !uhrzeit) {
-          alert("Bitte Datum und Uhrzeit eingeben.");
-          return;
-        }
-
-        const email = "schr.ott@posteo.de";
-        const subject = "Neue Datum & Uhrzeit Eingabe";
-        const body = `Datum: ${datum}%0DUhrzeit: ${uhrzeit}`;
-
-        window.location.href = `mailto:${email}?subject=${subject}&body=${body}`;
-      }
-
       window.onload = function () {
         const audio = document.getElementById("background-audio");
         audio.volume = 0.9;
